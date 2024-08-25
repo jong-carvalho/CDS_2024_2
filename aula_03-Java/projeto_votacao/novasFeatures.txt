@@ -1,0 +1,3 @@
+adicionar a opção de confirmar para registrar um voto em um candidato
+
+organizar para que a aplicação aceite votos para prefeito e também vereador
