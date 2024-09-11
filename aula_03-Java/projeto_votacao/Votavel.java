@@ -1,5 +1,6 @@
 
-// a interface votavel vai definir nossos metodos impedindo que sejam diferentes
+// a interface votavel vai definir que quem implemente esses metodos
+// não faça nenhuma alteração
 public interface Votavel {
     void adicionarVoto();
     int getVotos();

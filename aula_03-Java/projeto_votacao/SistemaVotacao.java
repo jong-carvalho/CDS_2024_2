@@ -38,7 +38,7 @@ public class SistemaVotacao {
             if (candidato.getNumero() == numeroCandidato) {
                 candidato.adicionarVoto();
                 System.out.println("Voto registrado para " + candidato.getNome() + " do partido " + candidato.getPartido().getNome());
-                return;
+
             }
         }
         System.out.println("Candidato não encontrado.");
@@ -48,7 +48,7 @@ public class SistemaVotacao {
     public void exibirResultados() {
         if (candidatos.isEmpty()) {
             System.out.println("Nenhum candidato registrado.");
-            return;
+
         }
 
 //        coloca o ponteiro na primeira posição do array para então fazer as comparações para achar qual candidato venceu a eleição
