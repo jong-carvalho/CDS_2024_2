@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3DEF2"
+    tools:context=".MainActivity">
+
+    <!--##########################PARTE SUPERIOR#################################-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="98dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jokenpo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="Jo Ken Po"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--##########################FIM-PARTE SUPERIOR#################################-->
+
+    <!--##########################GUIDELINES#################################-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+    <!--##########################FIM-GUIDELINES#################################-->
+
+    <!--##########################ESCOLHA IA#################################-->
+    <ImageView
+        android:id="@+id/imageViewPapel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPedra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/imageViewPedra"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPapel"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewTesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPapel"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPapel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/imageViewTesoura"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPedra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPedra"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPedra"
+        app:srcCompat="@drawable/tesoura" />
+    <!--##########################FIM-ESCOLHA IA#################################-->
+
+    <!--##########################ESCOLHA JOGADOR#################################-->
+    <ImageView
+        android:id="@+id/escolhaJogadorPapel"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/escolhaJogadorPedra"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/escolhaJogadorPedra"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/escolhaJogadorPapel"
+        app:layout_constraintEnd_toStartOf="@+id/escolhaJogadorTesoura"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/escolhaJogadorPapel"
+        app:layout_constraintTop_toTopOf="@+id/escolhaJogadorPapel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/escolhaJogadorTesoura"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/escolhaJogadorPedra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/escolhaJogadorPedra"
+        app:layout_constraintTop_toTopOf="@+id/escolhaJogadorPedra"
+        app:srcCompat="@drawable/tesoura" />
+    <!--##########################FIM-ESCOLHA JOGADOR#################################-->
+
+    <!--##########################RINGUE#################################-->
+    <ImageView
+        android:id="@+id/circuloAzul"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/circuloazul" />
+
+    <ImageView
+        android:id="@+id/circuloVermelho"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/circulovermelho" />
+
+    <ImageView
+        android:id="@+id/ringueIAPapel"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/ringueIAPedra"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pedra"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/ringueIATesoura"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/circuloAzul"
+        app:srcCompat="@drawable/tesoura"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/ringueJogadorPapel"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageView
+        android:id="@+id/ringueJogadorPedra"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/ringueJogadorTesoura"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/tesoura" />
+
+    <TextView
+        android:id="@+id/versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="250sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPedra" />
+
+    <ImageView
+        android:id="@+id/vencedor"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:layout_marginTop="272dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vencedor" />
+
+    <ImageView
+        android:id="@+id/perdedor"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:layout_marginTop="272dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/perdedor" />
+
+    <!--##########################FIM-RINGUE#################################-->
+
+
+    <!--##########################PLACAR#################################-->
+    <TextView
+        android:id="@+id/nomeJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="Jogador"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/nomeIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="IA"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTesoura" />
+
+    <TextView
+        android:id="@+id/vitoriaJogador01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/vitoriaJogador02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeJogador" />
+
+    <TextView
+        android:id="@+id/vitoriaJogador02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/vitoriaJogador03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vitoriaJogador01"
+        app:layout_constraintTop_toBottomOf="@+id/nomeJogador" />
+
+    <TextView
+        android:id="@+id/vitoriaJogador03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toEndOf="@+id/vitoriaJogador02"
+        app:layout_constraintTop_toBottomOf="@+id/nomeJogador" />
+
+    <TextView
+        android:id="@+id/vitoriaIA01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/vitoriaIA02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nomeIA"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/nomeIA" />
+
+    <TextView
+        android:id="@+id/vitoriaIA02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/vitoriaIA03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vitoriaIA01"
+        app:layout_constraintTop_toBottomOf="@+id/nomeIA" />
+
+    <TextView
+        android:id="@+id/vitoriaIA03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum_brush_script"
+        android:text="X"
+        android:textSize="48sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vitoriaIA02"
+        app:layout_constraintTop_toBottomOf="@+id/nomeIA" />
+
+
+    <!--##########################FIM-PLACAR#################################-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

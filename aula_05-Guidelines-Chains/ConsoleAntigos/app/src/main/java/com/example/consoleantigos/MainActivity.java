@@ -153,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ConsolesAntigos buscarConsoleSelecionado() {
         ConsolesAntigos[] consolesSelecionados = isEnglish ? consolesENG : consolesPTBR;
+        if(isEnglish == false){
+
+        } else {
+
+        }
 
 //        essa lógica pode ser melhorada -> deixando assim para ficar mais simples de entender
         if (checkBoxAtari.isChecked()) return buscarConsolePorNome("Atari 2600", consolesSelecionados);
