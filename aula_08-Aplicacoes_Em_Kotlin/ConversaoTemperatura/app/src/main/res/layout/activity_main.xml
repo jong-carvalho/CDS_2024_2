@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextTemperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a temperatura"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonConverterParaCelsius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Converter para Celsius"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonConverterParaFahrenheit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Converter para Fahrenheit"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+</LinearLayout>
